@@ -72,6 +72,35 @@
 
     #region Question 3
     // Given int genreNumber = 1;, cast it into a Genre value and print the result.
+    //    enum Genre
+    //    {
+    //        Fiction,
+    //        NonFiction,
+    //        Science
+    //    }
+
+    //    class Program
+    //    {
+    //        static void Main()
+    //        {
+
+    //            int genreNumber = 1;
+
+    //            Console.WriteLine((Genre)genreNumber);
+
+
+    //        }
+    //    }
+
+
+    #endregion
+
+
+    #region Question 4
+    // Given string genreText = "Science;", convert it into a Genre value using
+    // Enum.Parse() and print the result.
+
+
     enum Genre
     {
         Fiction,
@@ -83,16 +112,16 @@
     {
         static void Main()
         {
+           
+            string genreText = "Science";
 
-            int genreNumber = 1;
+            Genre genre = Enum.Parse<Genre>(genreText);
 
-            Console.WriteLine((Genre)genreNumber);
+            Console.WriteLine(genre);
 
             
         }
     }
-
-
-    #endregion
+#endregion
 
 }
