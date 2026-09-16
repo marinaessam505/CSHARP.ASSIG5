@@ -36,6 +36,42 @@
     #region Question 2
     // Using the Genre enum above, print the underlying int value of
     // Genre.Fiction, Genre.NonFiction, and Genre.Science by casting each to int.
+    //enum Genre
+    //{
+    //    Fiction,
+    //    NonFiction,
+    //    Science
+    //}
+
+    //class Book
+    //{
+    //    public Genre Genre { get; set; }
+    //}
+
+    //class Program
+    //{
+    //    static void Main()
+    //    {
+    //        Book book = new Book();
+
+    //        book.Genre = Genre.Science;
+
+    //        Console.WriteLine(book.Genre);
+
+
+
+    //        Console.WriteLine((int)Genre.Fiction);
+    //        Console.WriteLine((int)Genre.NonFiction);
+    //        Console.WriteLine((int)Genre.Science);
+    //    }
+    //}
+    #endregion
+
+
+
+
+    #region Question 3
+    // Given int genreNumber = 1;, cast it into a Genre value and print the result.
     enum Genre
     {
         Fiction,
@@ -43,29 +79,20 @@
         Science
     }
 
-    class Book
-    {
-        public Genre Genre { get; set; }
-    }
-
     class Program
     {
         static void Main()
         {
-            Book book = new Book();
 
-            book.Genre = Genre.Science;
+            int genreNumber = 1;
 
-            Console.WriteLine(book.Genre);
+            Console.WriteLine((Genre)genreNumber);
 
-
-
-            Console.WriteLine((int)Genre.Fiction);
-            Console.WriteLine((int)Genre.NonFiction);
-            Console.WriteLine((int)Genre.Science);
+            
         }
     }
-    #endregion
 
+
+    #endregion
 
 }
