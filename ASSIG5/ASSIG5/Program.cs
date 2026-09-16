@@ -101,6 +101,35 @@
     // Enum.Parse() and print the result.
 
 
+    //enum Genre
+    //{
+    //    Fiction,
+    //    NonFiction,
+    //    Science
+    //}
+
+    //class Program
+    //{
+    //    static void Main()
+    //    {
+
+    //        string genreText = "Science";
+
+    //        Genre genre = Enum.Parse<Genre>(genreText);
+
+    //        Console.WriteLine(genre);
+
+
+    //    }
+    //}
+    #endregion
+
+
+
+    #region Question 5
+    //Given string genreText = "Mystery;" (not a valid Genre value), use
+    // Enum.TryParse() to attempt the conversion. Print "Unknown genre" if it fails.
+
     enum Genre
     {
         Fiction,
@@ -112,12 +141,18 @@
     {
         static void Main()
         {
-           
-            string genreText = "Science";
+            
+            string genreText = "Mystery";
+            Genre genre;
 
-            Genre genre = Enum.Parse<Genre>(genreText);
-
-            Console.WriteLine(genre);
+            if (Enum.TryParse(genreText, out genre))
+            {
+                Console.WriteLine(genre);
+            }
+            else
+            {
+                Console.WriteLine("Unknown genre");
+            }
 
             
         }
